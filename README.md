@@ -1,3 +1,3 @@
-### Udacity-React-Nanodegree
 
-Click on the my-reads folder for more information.
+
+### Click on the my-reads folder for more information.
