@@ -21,12 +21,13 @@ The backend API uses a fixed set of cached search results and is limited to a pa
 
 To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend.
 
-### PROJECT SPECIFICATION
 
-# Application Setup
 
-## CRITERIA
-## MEETS SPECIFICATIONS
+## PROJECT SPECIFICATION
+
+### Application Setup
+
+#### MEETS SPECIFICATIONS
 
 Is the application easy to install and start?
 
@@ -36,10 +37,10 @@ Does the application include README with clear installation and launch instructi
 
 A README is included with the project. The README includes clear instructions for installing and launching the project.
 
-# Main Page
+## Main Page
 
-## CRITERIA
-## MEETS SPECIFICATIONS
+### CRITERIA
+### MEETS SPECIFICATIONS
 
 Does the main page show three categories (or “bookshelves”) for books (currently reading, want to read, and read)?
 
@@ -53,10 +54,10 @@ Does information persist between page refreshes?
 
 When the browser is refreshed, the same information is displayed on the page.
 
-# Search Page
+## Search Page
 
-## CRITERIA
-## MEETS SPECIFICATIONS
+### CRITERIA
+### MEETS SPECIFICATIONS
 
 Does the search page have a search input that lets users search for books?
 
@@ -70,10 +71,10 @@ Do selections made on the search page show up on the main page?
 
 When an item is categorized on the search page, and the user navigates to the main page, it appears on that shelf in the main page.
 
-# Routing
+## Routing
 
-## CRITERIA
-## MEETS SPECIFICATIONS
+### CRITERIA
+### MEETS SPECIFICATIONS
 
 Does the main page link to the search page?
 
@@ -83,10 +84,10 @@ Does the search page link back to the main page?
 
 The search page contains a link to the main page. When the link is clicked, the main page is displayed and the URL in the browser’s address bar is /.
 
-# Code Functionality
+## Code Functionality
 
-## CRITERIA
-## MEETS SPECIFICATIONS
+### CRITERIA
+### MEETS SPECIFICATIONS
 
 Does the project code handle state management appropriately?
 
