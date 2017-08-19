@@ -1,6 +1,4 @@
-<<<<<<< HEAD:README.md
-## MyReads: A Book Tracking App
-=======
+
 ## My-Reads: A Book Tracking App
 >>>>>>> fa4888cddf0dd31eabfc00e0c7f0929885c83753:my-reads/README.md
 
