@@ -1,6 +1,6 @@
 
 ## My-Reads: A Book Tracking App
->>>>>>> fa4888cddf0dd31eabfc00e0c7f0929885c83753:my-reads/README.md
+
 
 This is the first project for the Udacity React Nanodegree programm.
 This application allows you to search for books and place the selected books on to shelf. There are two pages: The Homepage shows the three bookshelfs, currently reading, want to read, and read. The search page will allow the user to search for books. 
