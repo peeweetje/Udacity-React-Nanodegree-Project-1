@@ -5,7 +5,8 @@
     "react-debounce-input": "^3.2.3",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-stars": "^2.2.5"
+    "react-stars": "^2.2.5",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "react-scripts": "4.0.1"
