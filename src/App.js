@@ -1,8 +1,8 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import SearchBooks from './SearchBooks'
-import ListBooks from './ListBooks'
-import * as BooksAPI from './BooksAPI'
+import SearchBooks from './components/search-books/SearchBooks'
+import ListBooks from './components/list-books/ListBooks'
+import * as BooksAPI from './utils/BooksAPI'
 import './App.css'
 
 class BooksApp extends React.Component {

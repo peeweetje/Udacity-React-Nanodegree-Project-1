@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import * as BooksAPI from './BooksAPI';
-import Book from './Book';
+import * as BooksAPI from '../../utils/BooksAPI';
+import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 
 class SearchBooks extends React.Component {
