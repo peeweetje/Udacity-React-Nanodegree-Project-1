@@ -1,7 +1,7 @@
 import React from 'react'
 import Book from '../book/Book'
 
-function BookShelf(props) {
+const BookShelf =(props) =>{
 
     return (
         <div className="bookshelf">
