@@ -1,19 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import * as BooksAPI from '../../utils/BooksAPI';
 import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 
-class SearchBooks extends React.Component {
-    state = {
-        searchResults: []
-    }
-
+const SearchBooks = () =>  {
+    const [searchResults, setSearchResults] =  useState([])
+   
     //Keeps track of the input value
-    search = (e) => {
+     const search = (e) => {
         const query = e.target.value;
         if (!query) {
-            this.setState({searchResults: []});
+           setSearchResults({searchResults: []});
             return;
         }
 
@@ -22,7 +20,7 @@ class SearchBooks extends React.Component {
             .search(query, 20)
             .then(searchResults => {
                 if (!searchResults || searchResults.error) {
-                    this.setState({searchResults: []});
+                   setSearchResults({searchResults: []});
                     return;
                 }
                 // map over the books returned from the search API, and check if they are on the
@@ -42,7 +40,6 @@ class SearchBooks extends React.Component {
             });
     };
 
-    render() {
         return (
             <div className="search-books">
                 <div className="search-books-bar">
@@ -54,14 +51,13 @@ class SearchBooks extends React.Component {
                             element="input"
                             type="text"
                             placeholder="Search by title or author"
-                            onChange={this.search}/>
+                            onChange={search}/>
                     </div>
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {this.state.searchResults && this
-                            .state
-                            .searchResults
+                        {searchResults && 
+                            searchResults
                             .map((book, index) => (
                                 <li key={book.id + index}>
                                     <Book book={book} onShelfChange={this.props.onShelfChange}/>
@@ -72,7 +68,6 @@ class SearchBooks extends React.Component {
             </div>
 
         )
-    }
 }
 
 export default SearchBooks
