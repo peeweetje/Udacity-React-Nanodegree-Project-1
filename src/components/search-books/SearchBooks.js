@@ -4,7 +4,7 @@ import * as BooksAPI from '../../utils/BooksAPI';
 import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 
-const SearchBooks = () =>  {
+const SearchBooks = (props) =>  {
     const [searchResults, setSearchResults] =  useState([])
    
     //Keeps track of the input value
@@ -26,9 +26,7 @@ const SearchBooks = () =>  {
                 // map over the books returned from the search API, and check if they are on the
                 // shelf or not
                 searchResults = searchResults.map((book) => {
-                    const bookOnShelf = this
-                        .props
-                        .books
+                    const bookOnShelf = props.books
                         .find(b => b.id === book.id);
                     book.shelf = bookOnShelf
                         ? bookOnShelf.shelf
@@ -36,7 +34,7 @@ const SearchBooks = () =>  {
                     return book;
                 });
 
-                this.setState({searchResults});
+                setSearchResults({searchResults});
             });
     };
 
@@ -56,11 +54,11 @@ const SearchBooks = () =>  {
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {searchResults && 
+                        { searchResults && searchResults?.length > 0 && 
                             searchResults
                             .map((book, index) => (
                                 <li key={book.id + index}>
-                                    <Book book={book} onShelfChange={this.props.onShelfChange}/>
+                                    <Book book={book} onShelfChange={props.onShelfChange}/>
                                 </li>
                             ))}
                     </ol>
