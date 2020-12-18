@@ -1,4 +1,5 @@
 import React from 'react'
+import {BookContainer, BookTop, BookCover, BookShelfChanger, BookTitle, BookAuthors}  from './book.styles'
 
 const Book = ({book, onShelfChange}) => {
 
@@ -10,9 +11,9 @@ const Book = ({book, onShelfChange}) => {
     let image = book.imageLinks ? book.imageLinks.thumbnail : 'https://books.google.com/googlebooks/images/no_cover_thumb.gif'
 
     return (
-        <div className="book">
-        <div className="book-top">
-            <div className="book-cover" style={{
+        <BookContainer>
+          <BookTop>
+            <BookCover style={{
                 width: 128,
                 height: 193,
                 backgroundImage: `url("${ image}")`,
@@ -20,7 +21,7 @@ const Book = ({book, onShelfChange}) => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
             }}/>
-            <div className="book-shelf-changer">
+            <BookShelfChanger>
                 <select onChange={ShelfChanger} value={book.shelf}>
                     <option value="none" disabled>Move to...</option>
                     <option value="currentlyReading">Currently Reading</option>
@@ -28,11 +29,11 @@ const Book = ({book, onShelfChange}) => {
                     <option value="read">Read</option>
                     <option value="none">None</option>
                 </select>
-             </div>
-         </div>
-        <div className="book-title">{book.title}</div>
-        <div className="book-authors">{book.authors ? book.authors.join(", ")  :"  Author Unknown " }</div>
-    </div>
+             </BookShelfChanger>
+         </BookTop>
+        <BookTitle>{book.title}</BookTitle>
+        <BookAuthors>{book.authors ? book.authors.join(", ")  :"  Author Unknown " }</BookAuthors>
+    </BookContainer>
 
     )
 }

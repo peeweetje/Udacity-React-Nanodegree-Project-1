@@ -1,22 +1,29 @@
-html, body, .root {
+html,
+body,
+.root {
   height: 100%;
 }
 body {
   line-height: 1.5;
 }
-body, .app {
-background:#e1f5fe ;
-
-
+body,
+.app {
+  background: #fafafa;
 }
 
 /* main page */
 
 .list-books-title {
   padding: 10px 0;
-  background:#29b6f6;
-  background: -webkit-linear-gradient(to right, #b3e5fc , #81d4fa, #4fc3f7 , #29b6f6);
-  background: linear-gradient(to right, #b3e5fc , #81d4fa, #4fc3f7  , #29b6f6);
+  background: #29b6f6;
+  background: -webkit-linear-gradient(
+    to right,
+    #b3e5fc,
+    #81d4fa,
+    #4fc3f7,
+    #29b6f6
+  );
+  background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7, #29b6f6);
   text-align: center;
 }
 .list-books-title h1 {
@@ -62,7 +69,7 @@ background:#e1f5fe ;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-size: 0;
 }
 
@@ -75,7 +82,6 @@ background:#e1f5fe ;
   left: 0;
   z-index: 5;
   display: flex;
-  
 }
 .search-books-input-wrapper {
   flex: 1;
@@ -122,68 +128,8 @@ background:#e1f5fe ;
   text-align: left;
 }
 
-.book {
-  width: 140px;
-}
-.book-title,
-.book-authors {
-  font-size: 0.8em;
-}
-.book-title {
-  margin-top: 10px;
-}
-.book-authors {
-  color: #555;
-}
-
-.book-top {
-  position: relative;
-  height: 200px;
-  display: flex;
-  align-items: flex-end;
-}
-
-.book-shelf-changer {
-  position: absolute;
-  right: 0;
-  bottom: -10px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #03a9f4;
-  background-image: url('./icons/arrow-drop-down.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.book-shelf-changer select {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-  font-family: 'raleway';
-  
-}
-
-option:checked {
-    color: red;  
-}
-
-
-/* book cover */
-
-.book-cover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  background: #eee;
-}
 .book-cover-title {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
 }
-
-
-
-
-
