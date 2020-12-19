@@ -3,16 +3,12 @@ import {Link} from 'react-router-dom'
 import BookShelf from '../book-shelf/BookShelf'
 
 
-
-
-const  ListBooks= (props) =>{
-
-   const { onShelfChange } = props;
+const  ListBooks= ({books, onShelfChange}) =>{
 
    //Filter the books according to the shelf they belong to.
-   const currentlyReading = props.books.filter((book) => book.shelf === 'currentlyReading')
-   const wantToRead =props.books.filter((book) => book.shelf === 'wantToRead')
-   const read =props.books.filter((book) => book.shelf === 'read')
+   const currentlyReading = books.filter((book) => book.shelf === 'currentlyReading')
+   const wantToRead =books.filter((book) => book.shelf === 'wantToRead')
+   const read =books.filter((book) => book.shelf === 'read')
   
  
    return(
@@ -20,7 +16,7 @@ const  ListBooks= (props) =>{
         <div className="list-books-content">
          <div>
           <BookShelf 
-              bookshelfTitle='Currently Reading'd
+              bookshelfTitle='Currently Reading'
               bookshelfBooks={currentlyReading}
               onShelfChange={onShelfChange}
               
