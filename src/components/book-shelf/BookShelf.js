@@ -1,13 +1,14 @@
 import React from 'react'
 import Book from '../book/Book'
+import {BookShelfs, BookShelfTitle, BookShelfBooks, BooksGrid} from './BookShelf.styles';
 
 const BookShelf =({bookshelfTitle, bookshelfBooks, onShelfChange}) =>{
 
     return (
-        <div className="bookshelf">
-            <h2 className="bookshelf-title">{bookshelfTitle}</h2>
-            <div className="bookshelf-books">
-                <ol className="books-grid">
+        <BookShelfs>
+            <BookShelfTitle>{bookshelfTitle}</BookShelfTitle>
+            <BookShelfBooks>
+                <BooksGrid>
                     {bookshelfBooks
                         .map((book) => {
                             return <li key={book.id}>
@@ -15,9 +16,9 @@ const BookShelf =({bookshelfTitle, bookshelfBooks, onShelfChange}) =>{
                             </li>
                         })
                       }
-                </ol>
-            </div>
-        </div>
+                </BooksGrid>
+            </BookShelfBooks>
+        </BookShelfs>
     )
 }
 

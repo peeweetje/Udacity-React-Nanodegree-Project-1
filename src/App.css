@@ -37,23 +37,6 @@ body,
   flex: 1;
 }
 
-.bookshelf {
-  padding: 0 10px 20px;
-}
-
-@media (min-width: 600px) {
-  .bookshelf {
-    padding: 0 20px 40px;
-  }
-}
-
-.bookshelf-title {
-  border-bottom: 1px solid #03a9f4;
-}
-.bookshelf-books {
-  text-align: center;
-}
-
 .open-search {
   position: fixed;
   right: 25px;
@@ -111,21 +94,6 @@ body,
 
 .search-books-results {
   padding: 80px 10px 20px;
-}
-
-/* books grid */
-
-.books-grid {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.books-grid li {
-  padding: 10px 15px;
-  text-align: left;
 }
 
 .book-cover-title {

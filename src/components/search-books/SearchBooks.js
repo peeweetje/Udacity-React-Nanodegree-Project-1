@@ -33,10 +33,7 @@ const SearchBooks = ({books, onShelfChange}) =>  {
                         : "none";
                     return book; 
                 })
-            
-                setSearchResults(booksFound);
-
-                
+                setSearchResults(booksFound); 
             });
     };
 
@@ -56,12 +53,11 @@ const SearchBooks = ({books, onShelfChange}) =>  {
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        {searchResults?.map((book, index) => (
-                                <li key={book.id + index}>
+                        {searchResults?.map((book) => (
+                                <li key={book.id}>
                                     <Book book={book} onShelfChange={onShelfChange}/>   
                                 </li>
-                            ))}
-                               
+                            ))}         
                     </ol>
                 </div>
             </div>
