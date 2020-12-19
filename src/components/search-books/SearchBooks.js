@@ -4,42 +4,44 @@ import * as BooksAPI from '../../utils/BooksAPI';
 import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 
-const SearchBooks = (props) =>  {
+const SearchBooks = ({books, onShelfChange}) =>  {
     const [searchResults, setSearchResults] =  useState([])
    
     //Keeps track of the input value
-     const search = (e) => {
+     const searchForBooks = (e) => {
         const query = e.target.value;
         if (!query) {
-           setSearchResults({searchResults: []});
+           setSearchResults([]);
             return;
         }
 
         //Call to the search API
         BooksAPI
             .search(query, 20)
-            .then(searchResults => {
-                if (!searchResults || searchResults.error) {
-                   setSearchResults({searchResults: []});
+            .then(results => {
+                if (!results || results.error) {
+                   setSearchResults([]);
                     return;
                 }
                 // map over the books returned from the search API, and check if they are on the
                 // shelf or not
-                searchResults = searchResults.map((book) => {
-                    const bookOnShelf = props.books
+                const booksFound = results.map((book) => {
+                    const bookOnShelf = books
                         .find(b => b.id === book.id);
                     book.shelf = bookOnShelf
                         ? bookOnShelf.shelf
                         : "none";
-                    return book;
-                });
+                    return book; 
+                })
+            
+                setSearchResults(booksFound);
 
-                setSearchResults({searchResults});
+                
             });
     };
 
         return (
-            <div className="search-books">
+            <div className="search-books" >
                 <div className="search-books-bar">
                     <Link className="close-search" to="/">Close</Link>
                     <div className="search-books-input-wrapper">
@@ -49,18 +51,17 @@ const SearchBooks = (props) =>  {
                             element="input"
                             type="text"
                             placeholder="Search by title or author"
-                            onChange={search}/>
+                            onChange={searchForBooks}/>
                     </div>
                 </div>
                 <div className="search-books-results">
                     <ol className="books-grid">
-                        { searchResults && searchResults?.length > 0 && 
-                            searchResults
-                            .map((book, index) => (
+                        {searchResults?.map((book, index) => (
                                 <li key={book.id + index}>
-                                    <Book book={book} onShelfChange={props.onShelfChange}/>
+                                    <Book book={book} onShelfChange={onShelfChange}/>   
                                 </li>
                             ))}
+                               
                     </ol>
                 </div>
             </div>
