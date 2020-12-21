@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import * as BooksAPI from '../../utils/BooksAPI';
 import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
+import {BooksGrid} from '../book-shelf/BookShelf.styles'
 
 const SearchBooks = ({books, onShelfChange}) =>  {
     const [searchResults, setSearchResults] =  useState([])
@@ -52,13 +53,13 @@ const SearchBooks = ({books, onShelfChange}) =>  {
                     </div>
                 </div>
                 <div className="search-books-results">
-                    <ol className="books-grid">
+                    <BooksGrid>
                         {searchResults?.map((book) => (
                                 <li key={book.id}>
                                     <Book book={book} onShelfChange={onShelfChange}/>   
                                 </li>
                             ))}         
-                    </ol>
+                    </BooksGrid>
                 </div>
             </div>
 
