@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import BookShelf from '../book-shelf/BookShelf'
+import {ListBooksContents, OpenSearch } from './listBooks.styles'
 
 
 const  ListBooks= ({books, onShelfChange}) =>{
@@ -12,14 +13,11 @@ const  ListBooks= ({books, onShelfChange}) =>{
   
  
    return(
-    <div className="list-books">
-        <div className="list-books-content">
-         <div>
+        <ListBooksContents>
           <BookShelf 
               bookshelfTitle='Currently Reading'
               bookshelfBooks={currentlyReading}
-              onShelfChange={onShelfChange}
-              
+              onShelfChange={onShelfChange}    
           />
           <BookShelf
               bookshelfTitle='Want to Read'
@@ -31,12 +29,10 @@ const  ListBooks= ({books, onShelfChange}) =>{
               bookshelfBooks={read}
               onShelfChange={onShelfChange}
           />
-        </div>
-      </div>
-         <div className="open-search">
+         <OpenSearch >
             <Link to="/search">Add a book</Link>
-        </div>
-    </div>
+        </OpenSearch >
+    </ListBooksContents>
   )
 }
 export default ListBooks
