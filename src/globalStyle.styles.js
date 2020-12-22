@@ -16,7 +16,6 @@ body {
   line-height: 1.5;
   font-family: 'Raleway', sans-serif;
 }
-
 html,
 body,
 .root {
@@ -24,7 +23,7 @@ body,
 }
 body,
 .app {
-  background: "yellow";
+  background: #fff;
 }
-
 `;
+
