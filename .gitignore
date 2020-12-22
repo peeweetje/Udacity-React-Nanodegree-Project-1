@@ -1,4 +1,5 @@
 node_modules
-yarn.lock
 .DS_Store
 .eslintcache
+.temp-eslintcache
+package-lock.json
