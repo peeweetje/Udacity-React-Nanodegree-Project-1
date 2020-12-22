@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom';
 import * as BooksAPI from '../../utils/BooksAPI';
 import Book from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 import {BooksGrid} from '../book-shelf/BookShelf.styles'
+import {SearchBooksBar, SearchBooksInputWrapper, SearchBooksResults, CloseSearch} from '../search-books/SearchBooks.styles'
 
 const SearchBooks = ({books, onShelfChange}) =>  {
     const [searchResults, setSearchResults] =  useState([])
@@ -39,10 +39,10 @@ const SearchBooks = ({books, onShelfChange}) =>  {
     };
 
         return (
-            <div className="search-books" >
-                <div className="search-books-bar">
-                    <Link className="close-search" to="/">Close</Link>
-                    <div className="search-books-input-wrapper">
+            <>
+                <SearchBooksBar>
+                    <CloseSearch to="/">Close</ CloseSearch>
+                    <SearchBooksInputWrapper>
                         <DebounceInput
                             minLength={2}
                             debounceTimeout={325}
@@ -50,9 +50,9 @@ const SearchBooks = ({books, onShelfChange}) =>  {
                             type="text"
                             placeholder="Search by title or author"
                             onChange={searchForBooks}/>
-                    </div>
-                </div>
-                <div className="search-books-results">
+                    </SearchBooksInputWrapper>
+                </SearchBooksBar>
+                <SearchBooksResults>
                     <BooksGrid>
                         {searchResults?.map((book) => (
                                 <li key={book.id}>
@@ -60,8 +60,8 @@ const SearchBooks = ({books, onShelfChange}) =>  {
                                 </li>
                             ))}         
                     </BooksGrid>
-                </div>
-            </div>
+                </SearchBooksResults>
+            </>
 
         )
 }
