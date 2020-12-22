@@ -1,16 +1,3 @@
-html,
-body,
-.root {
-  height: 100%;
-}
-body {
-  line-height: 1.5;
-}
-body,
-.app {
-  background: #fafafa;
-}
-
 /* main page */
 
 .list-books-title {
@@ -30,46 +17,6 @@ body,
   font-weight: 400;
   margin: 0;
   color: #000;
-}
-
-/* search page */
-
-.search-books-bar {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  display: flex;
-}
-.search-books-input-wrapper {
-  flex: 1;
-  background: #03a9f4;
-}
-.search-books-bar input {
-  width: 100%;
-  padding: 15px 10px;
-  font-size: 1.25rem;
-  border: none;
-  outline: none;
-}
-
-.close-search {
-  display: block;
-  top: 20px;
-  left: 15px;
-  width: 50px;
-  height: 53px;
-  background: #eee;
-  background-image: url('./icons/arrow-back.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 28px;
-  font-size: 0;
-}
-
-.search-books-results {
-  padding: 80px 10px 20px;
 }
 
 .book-cover-title {
