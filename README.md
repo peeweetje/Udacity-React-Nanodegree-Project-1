@@ -1,8 +1,8 @@
 ## Update 2020
 
-> Removed the class-components => add function components with hooks.
-> Removed css => Add styled-componenents.
-> Change folder structure.
+> - Removed the class-components => add function components with hooks.
+> - Removed css => Add styled-components.
+> - Change folder structure.
 
 ## My-Reads: A Book Tracking App
 
