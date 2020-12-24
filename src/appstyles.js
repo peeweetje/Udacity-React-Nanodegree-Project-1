@@ -1,7 +1,7 @@
-/* main page */
+import styled from 'styled-components'
 
-.list-books-title {
-  padding: 10px 0;
+export const ListBooksTitle = styled.div`
+ padding: 10px 0;
   background: #29b6f6;
   background: -webkit-linear-gradient(
     to right,
@@ -12,15 +12,10 @@
   );
   background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7, #29b6f6);
   text-align: center;
-}
-.list-books-title h1 {
+
+  h1 {
   font-weight: 400;
   margin: 0;
   color: #000;
 }
-
-.book-cover-title {
-  padding: 20px 10px 0;
-  text-align: center;
-  font-size: 0.8em;
-}
+`

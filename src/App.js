@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 import SearchBooks from './components/search-books/SearchBooks'
 import ListBooks from './components/list-books/ListBooks'
 import * as BooksAPI from './utils/BooksAPI'
-import './App.css'
+import {ListBooksTitle} from './appstyles'
 
 const BooksApp = () => {
    let [books, setBooks] = useState([])
@@ -32,17 +32,17 @@ const BooksApp = () => {
     
 
   return( 
-        <div className="app">
+        <>
            <Route
              path="/"
              exact
              render={() => (
-           <div>
-               <div className="list-books-title">
+           <>
+               <ListBooksTitle>
                  <h1>MyReads</h1>
-               </div>
+               </ListBooksTitle>
                <ListBooks books={books} onShelfChange={onShelfChange}/>
-             </div>
+             </>
            )}/>
   
           <Route
@@ -53,7 +53,7 @@ const BooksApp = () => {
              history={history}
             books={books}/>)}
             />
-        </div>)
+        </>)
 }
 
 export default BooksApp;
