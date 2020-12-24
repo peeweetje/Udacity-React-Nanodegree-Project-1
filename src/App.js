@@ -16,7 +16,7 @@ const BooksApp = () => {
             setBooks(results)
            })
    
-  }, []);
+  });
 
    const onShelfChange = (book, shelf) => {
        book.shelf = shelf
@@ -28,7 +28,9 @@ const BooksApp = () => {
          })
        })
          BooksAPI.update(book, shelf)
+        
        }
+      
     
 
   return( 
