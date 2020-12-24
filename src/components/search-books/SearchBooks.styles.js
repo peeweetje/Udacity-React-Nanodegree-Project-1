@@ -12,15 +12,15 @@ export const SearchBooksBar = styled.div`
 `
 export const CloseSearch = styled(Link)`
 display: block;
-  top: 20px;
-  left: 15px;
-  width: 50px;
-  height: 53px;
+  top: 1.25rem;
+  left: 1rem;
+  width: 3.125rem;
+  height: 3.375rem;
   background: #eee;
   background-image: url(${ArrowBack});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 28px;
+  background-size: 1.75rem;
   font-size: 0;
 `
 
@@ -30,12 +30,12 @@ export const SearchBooksInputWrapper = styled.div`
 
 input {
   width: 100%;
-  padding: 15px 10px;
+  padding: 1rem 0.625rem;
   font-size: 1.25rem;
   border: none;
   outline: none; 
 }
 `
 export const SearchBooksResults = styled.div`
-padding: 80px 10px 20px;
+padding: 5rem 0.625rem 1.25rem;
 `
