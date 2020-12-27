@@ -17,9 +17,6 @@ const Book = ({book, onShelfChange}) => {
                 width: 128,
                 height: 193,
                 backgroundImage: `url("${ image}")`,
-                backgroundRepeat: 'no-repeat',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
             }}/>
             <BookShelfChanger>
                 <select onChange={ShelfChanger} value={book.shelf}>

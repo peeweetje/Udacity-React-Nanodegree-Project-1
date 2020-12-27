@@ -28,7 +28,6 @@ const BooksApp = () => {
          })
        })
          BooksAPI.update(book, shelf)
-        
        }
       
     

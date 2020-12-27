@@ -3,8 +3,9 @@ import Book from '../book/Book'
 import {BookShelfs, BookShelfTitle, BookShelfBooks, BooksGrid} from './BookShelf.styles';
 
 const BookShelf =({bookshelfTitle, bookshelfBooks, onShelfChange}) =>{
+    
 
-    return (
+    return ( 
         <BookShelfs>
             <BookShelfTitle>{bookshelfTitle}</BookShelfTitle>
             <BookShelfBooks>

@@ -7,7 +7,7 @@ import {ListBooksContents, OpenSearch } from './listBooks.styles'
 const  ListBooks= ({books, onShelfChange}) =>{
 
    //Filter the books according to the shelf they belong to.
-   const currentlyReading = books.filter((book) => book.shelf === 'currentlyReading')
+   const currentlyReading = books.filter((book) => book.shelf === 'currentlyReading') 
    const wantToRead = books.filter((book) => book.shelf === 'wantToRead')
    const read = books.filter((book) => book.shelf === 'read')
   

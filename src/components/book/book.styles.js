@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import arrowDropdown from '../../icons/arrow-drop-down.svg'
 
 
-
 export const BookContainer = styled.div`
 width: 8.75rem;
 `
@@ -15,6 +14,9 @@ position: relative;
 export const BookCover = styled.div`
   box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16), 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.23);
   background: #eee;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
 `
 export const BookShelfChanger = styled.div`
  position: absolute;
