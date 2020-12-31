@@ -21,11 +21,11 @@ const BooksApp = () => {
    const onShelfChange = (book, shelf) => {
        book.shelf = shelf
        setBooks(books => {
-         return ({
-           books: books
+         return (
+           books
              .filter(b => b.id !== book.id)
              .concat([book])
-         })
+         )
        })
          BooksAPI.update(book, shelf)
        }
