@@ -16,7 +16,7 @@ const BooksApp = () => {
             setBooks(results)
            })
    
-  });
+  },[]);
 
    const onShelfChange = (book, shelf) => {
        book.shelf = shelf
