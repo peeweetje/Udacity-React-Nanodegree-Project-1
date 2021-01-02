@@ -9,7 +9,7 @@ export const BookShelfs = styled.div`
 }
 `
 export const BookShelfTitle = styled.h2`
-border-bottom: 0.0625rem solid #03a9f4;
+border-bottom: 0.5rem solid #03a9f4;
 `
 export const BookShelfBooks = styled.div`
 text-align: center;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const ListBooksTitle = styled.div`
- padding: 10px 0;
+ padding: 0.625rem 0;
   background: #29b6f6;
   background: -webkit-linear-gradient(
     to right,
@@ -14,8 +14,7 @@ export const ListBooksTitle = styled.div`
   text-align: center;
 
   h1 {
-  font-weight: 400;
+  font-weight:700;
   margin: 0;
-  color: #000;
 }
 `

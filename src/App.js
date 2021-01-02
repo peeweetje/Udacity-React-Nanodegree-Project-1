@@ -40,7 +40,7 @@ const BooksApp = () => {
              render={() => (
            <>
                <ListBooksTitle>
-                 <h1>MyReads</h1>
+                 <h1>Library</h1>
                </ListBooksTitle>
                <ListBooks books={books} onShelfChange={onShelfChange}/>
              </>
