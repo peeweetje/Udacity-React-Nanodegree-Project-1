@@ -14,15 +14,12 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat';
 }
 html,
 body,
 .root {
   height: 100%;
-}
-body,
-.app {
   background: #fff;
 }
 `;
