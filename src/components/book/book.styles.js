@@ -25,7 +25,7 @@ export const BookShelfChanger = styled.div`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: #03a9f4;
+  background:#4b5179;
   background-image: url(${arrowDropdown});
   background-repeat: no-repeat;
   background-position: center;
@@ -37,7 +37,7 @@ export const BookShelfChanger = styled.div`
   height: 100%;
   opacity: 0;
   cursor: pointer;
-  font-family: 'raleway';
+  font-family: 'montserrat';
 
   option:checked {
   color: red;

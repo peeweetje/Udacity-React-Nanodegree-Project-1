@@ -16,7 +16,7 @@ export const OpenSearch = styled.div`
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 50%;
-  background: #03a9f4;
+  background:#4b5179;
   background-image: url(${AddIcon});
   background-repeat: no-repeat;
   background-position: center;

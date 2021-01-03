@@ -1,20 +1,15 @@
 import styled from 'styled-components'
 
 export const ListBooksTitle = styled.div`
- padding: 0.625rem 0;
-  background: #29b6f6;
-  background: -webkit-linear-gradient(
-    to right,
-    #b3e5fc,
-    #81d4fa,
-    #4fc3f7,
-    #29b6f6
-  );
-  background: linear-gradient(to right, #b3e5fc, #81d4fa, #4fc3f7, #29b6f6);
+  margin-bottom: 7rem;
+  padding: 0.625rem 0;
+  background: #fafafa;
+  box-shadow: 0 0.25rem 0.25rem -0.25rem #C7D6D5;
   text-align: center;
 
   h1 {
   font-weight:700;
   margin: 0;
+  color: #4B5179;
 }
 `
