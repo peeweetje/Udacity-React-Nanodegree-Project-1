@@ -9,13 +9,10 @@ export const SearchBooksBar = styled.div`
   left: 0;
   z-index: 5;
   display: flex;
+  box-shadow: 0 0.25rem 0.25rem -0.25rem #C7D6D5;
 `
 export const CloseSearch = styled(Link)`
-display: block;
-  top: 1.25rem;
-  left: 1rem;
   width: 3.125rem;
-  height: 3.375rem;
   background: #eee;
   background-image: url(${ArrowBack});
   background-position: center;

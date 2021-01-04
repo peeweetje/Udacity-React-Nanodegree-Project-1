@@ -8,8 +8,8 @@ export const ListBooksContents = styled.div`
 
 export const OpenSearch = styled.div`
  position: fixed;
-  right: 1.5625rem;
-  bottom: 1.5625rem;
+ right: 1.5625rem;
+ bottom: 1.5625rem;
 
   a {
   display: block;

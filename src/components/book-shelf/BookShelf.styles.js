@@ -12,12 +12,13 @@ export const BookShelfTitle = styled.h2`
 text-align: center;
 border-bottom: 0.25rem solid #fafafa;
 box-shadow: 0 0.375rem 0.25rem -0.25rem #C7D6D5;
+color: #4b5179;
 `
 export const BookShelfBooks = styled.div`
 text-align: center;
 `
 export const BooksGrid = styled.ol`
- list-style-type: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;

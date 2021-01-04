@@ -19,7 +19,7 @@ export const BookCover = styled.div`
   background-position:center;
 `
 export const BookShelfChanger = styled.div`
- position: absolute;
+  position: absolute;
   right: 0;
   bottom: -0.625rem;
   width: 2.5rem;
@@ -45,10 +45,11 @@ export const BookShelfChanger = styled.div`
 }
 `
 export const BookTitle = styled.div`
- margin-top: 0.625rem;
+ margin-top: 1rem;
  font-size: 0.8rem;
+ font-weight: 700;
 `
 export const BookAuthors = styled.div`
- color: #555;
+ color: #725a5a;
  font-size: 0.8rem;
 `
