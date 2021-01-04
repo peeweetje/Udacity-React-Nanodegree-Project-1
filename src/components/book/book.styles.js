@@ -4,6 +4,7 @@ import arrowDropdown from '../../icons/arrow-drop-down.svg'
 
 export const BookContainer = styled.div`
 width: 8.75rem;
+margin-top: 4rem;
 `
 export const BookTop = styled.div`
 position: relative;
