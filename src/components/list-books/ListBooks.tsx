@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
 import BookShelf from '../book-shelf/BookShelf';
+import { BookType } from '../book/Book';
 import { ListBooksContents, OpenSearch } from './listBooks.styles';
 
 interface IlistBooksProps {
-  books: any[];
+  books: BookType[];
   onShelfChange: any;
 }
 

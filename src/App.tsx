@@ -4,6 +4,7 @@ import SearchBooks from './components/search-books/SearchBooks';
 import ListBooks from './components/list-books/ListBooks';
 import * as BooksAPI from './utils/BooksAPI';
 import { ListBooksTitle } from './appstyles';
+import { BookType } from './components/book/Book';
 
 const BooksApp: FC = () => {
   let [books, setBooks] = useState([]);
@@ -14,10 +15,12 @@ const BooksApp: FC = () => {
     });
   }, []);
 
-  const onShelfChange = (book: any, shelf: any) => {
+  const onShelfChange = (book: BookType, shelf: string) => {
     book.shelf = shelf;
     setBooks((books) => {
-      return books.filter((b: any) => b.id !== book.id).concat([book] as any);
+      return books
+        .filter((b: BookType) => b.id !== book.id)
+        .concat([book] as any);
     });
     BooksAPI.update(book, shelf);
   };

@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import Book from '../book/Book';
+import Book, { BookType } from '../book/Book';
 import {
   BookShelfs,
   BookShelfTitle,
@@ -9,9 +9,9 @@ import {
 import ReactStars from 'react-rating-stars-component';
 
 interface IbookShelfProps {
-  bookshelfTitle: any;
+  bookshelfTitle: string;
   bookshelfBooks: any;
-  onShelfChange: any;
+  onShelfChange: () => void;
 }
 
 const BookShelf: FC<IbookShelfProps> = ({
@@ -38,16 +38,14 @@ const BookShelf: FC<IbookShelfProps> = ({
       <BookShelfTitle>{bookshelfTitle}</BookShelfTitle>
       <BookShelfBooks>
         <BooksGrid>
-          {bookshelfBooks.map(
-            (book: { id: string | number | null | undefined }) => {
-              return (
-                <li key={book.id}>
-                  <Book book={book} onShelfChange={onShelfChange} />
-                  <ReactStars onChange={ratingStarsChanged} {...starConfig} />
-                </li>
-              );
-            }
-          )}
+          {bookshelfBooks.map((book: BookType) => {
+            return (
+              <li key={book.id}>
+                <Book book={book} onShelfChange={onShelfChange} />
+                <ReactStars onChange={ratingStarsChanged} {...starConfig} />
+              </li>
+            );
+          })}
         </BooksGrid>
       </BookShelfBooks>
     </BookShelfs>

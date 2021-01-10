@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import {
   BookContainer,
   BookTop,
@@ -8,13 +8,23 @@ import {
   BookAuthors,
 } from './book.styles';
 
+export type BookType = {
+  id: string;
+  shelf: string;
+  imageLinks?: {
+    thumbnail: string;
+  };
+  title?: string;
+  authors?: string[];
+};
+
 interface IbookProps {
-  book: any;
+  book: BookType;
   onShelfChange: any;
 }
 
 const Book: FC<IbookProps> = ({ book, onShelfChange }) => {
-  const ShelfChanger = (e: { target: { value: any } }) => {
+  const ShelfChanger = (e: ChangeEvent<HTMLSelectElement>) => {
     const shelf = e.target.value;
     onShelfChange(book, shelf);
   };

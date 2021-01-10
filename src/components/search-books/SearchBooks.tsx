@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react';
 import * as BooksAPI from '../../utils/BooksAPI';
-import Book from '../book/Book';
+import Book, { BookType } from '../book/Book';
 import DebounceInput from 'react-debounce-input';
 import { BooksGrid } from '../book-shelf/BookShelf.styles';
 import {
@@ -11,7 +11,7 @@ import {
 } from './SearchBooks.styles';
 
 interface IsearchBooksProps {
-  books: any[];
+  books: BookType[];
   onShelfChange: any;
   history: any;
 }
@@ -35,7 +35,7 @@ const SearchBooks: FC<IsearchBooksProps> = ({ books, onShelfChange }) => {
       }
       // map over the books returned from the search API, and check if they are on the
       // shelf or not
-      const booksFound = results.map((book: { id: any; shelf: any }) => {
+      const booksFound = results.map((book: { id: string; shelf: string }) => {
         const bookOnShelf = books.find((b: any) => b.id === book.id);
         book.shelf = bookOnShelf ? bookOnShelf.shelf : 'none';
         return book;
@@ -61,7 +61,7 @@ const SearchBooks: FC<IsearchBooksProps> = ({ books, onShelfChange }) => {
       </SearchBooksBar>
       <SearchBooksResults>
         <BooksGrid>
-          {searchResults?.map((book: any) => (
+          {searchResults?.map((book: BookType) => (
             <li key={book.id}>
               <Book book={book} onShelfChange={onShelfChange} />
             </li>
