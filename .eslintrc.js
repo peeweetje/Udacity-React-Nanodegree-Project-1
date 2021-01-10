@@ -8,6 +8,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:react/recommended"
     ],
+    parser: "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -20,5 +21,5 @@ module.exports = {
     ],
     "rules": {
         "react/prop-types": 0
-    }
+    },
 };
