@@ -1,8 +1,9 @@
 ## Update 2020
 
-> - Removed the class-components => add function components with hooks.
+> - Removed the class-components => add functional components with hooks.
 > - Removed css => Add styled-components.
 > - Change folder structure.
+> - Add typescript to project.
 
 ## My-Reads: A Book Tracking App
 
