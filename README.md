@@ -4,6 +4,7 @@
 > - Removed css => Add styled-components.
 > - Change folder structure.
 > - Add typescript to project.
+> - Add workflow for github-actions.
 
 ## My-Reads: A Book Tracking App
 
