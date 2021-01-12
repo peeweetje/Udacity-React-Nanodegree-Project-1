@@ -4,9 +4,7 @@ import App from './App';
 import { MemoryRouter } from 'react-router-dom';
 
 /** 
- This course is not designed to teach Test Driven Development. 
- Feel free to use this file to test your application, but it 
- is not required.
+ this test is not failing locally but on build it is, it is not updating
 **/
 
 it('renders without crashing', () => {
