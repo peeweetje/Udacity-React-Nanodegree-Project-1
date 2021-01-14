@@ -22,3 +22,11 @@ jobs:
         run: npm run build
       - name: test
         run: npm test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEFAULT_BUMP: patch
+      - name: deploy to heroku
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'my-reads-library'
+          heroku_email: 'petravos70@gmail.com'
