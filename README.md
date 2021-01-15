@@ -5,6 +5,7 @@
 > - Change folder structure.
 > - Add typescript to project.
 > - Add workflow for github-actions.
+> - deployed app to Heroku.
 
 ## My-Reads: A Book Tracking App
 
