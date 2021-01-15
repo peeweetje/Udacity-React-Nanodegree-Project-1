@@ -9,7 +9,7 @@ on:
       types: [opened, synchronize]
 
 jobs:
-  simple_deployment_pipeline:
+  Heroku_deployment_pipeline:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
