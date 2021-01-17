@@ -3,15 +3,18 @@ import { Route } from 'react-router-dom';
 import SearchBooks from './components/search-books/SearchBooks';
 import ListBooks from './components/list-books/ListBooks';
 import * as BooksAPI from './utils/BooksAPI';
-import { ListBooksTitle } from './appstyles';
+import { ListBooksTitle, LoadingStyle } from './appstyles';
 import { BookType } from './components/book/Book';
 
 const BooksApp: FC = () => {
   let [books, setBooks] = useState([]);
+  const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     BooksAPI.getAll().then((results) => {
       setBooks(results);
+      setLoading(false);
     });
   }, []);
 
@@ -32,6 +35,9 @@ const BooksApp: FC = () => {
         exact
         render={() => (
           <>
+            {isLoading ? (
+              <LoadingStyle> Please Wait... the page is loading</LoadingStyle>
+            ) : null}
             <ListBooksTitle>
               <h1>Book Shelfs</h1>
             </ListBooksTitle>
@@ -39,7 +45,6 @@ const BooksApp: FC = () => {
           </>
         )}
       />
-
       <Route
         path='/search'
         render={({ history }) => (
