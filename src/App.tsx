@@ -5,6 +5,7 @@ import ListBooks from './components/list-books/ListBooks';
 import * as BooksAPI from './utils/BooksAPI';
 import { ListBooksTitle, LoadingStyle } from './appstyles';
 import { BookType } from './components/book/Book';
+import Loading from '../src/components/loading/loading';
 
 const BooksApp: FC = () => {
   let [books, setBooks] = useState([]);
@@ -36,7 +37,9 @@ const BooksApp: FC = () => {
         render={() => (
           <>
             {isLoading ? (
-              <LoadingStyle> Please Wait... the page is loading</LoadingStyle>
+              <LoadingStyle>
+                <Loading />
+              </LoadingStyle>
             ) : null}
             <ListBooksTitle>
               <h1>Book Shelfs</h1>
