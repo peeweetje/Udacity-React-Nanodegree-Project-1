@@ -9,7 +9,7 @@ import Loading from '../src/components/loading/loading';
 
 const BooksApp: FC = () => {
   let [books, setBooks] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
@@ -36,15 +36,18 @@ const BooksApp: FC = () => {
         exact
         render={() => (
           <>
-            {isLoading ? (
+            {isLoading === false ? (
+              <>
+                <ListBooksTitle>
+                  <h1>Book Shelfs</h1>
+                </ListBooksTitle>
+                <ListBooks books={books} onShelfChange={onShelfChange} />
+              </>
+            ) : (
               <LoadingStyle>
                 <Loading />
               </LoadingStyle>
-            ) : null}
-            <ListBooksTitle>
-              <h1>Book Shelfs</h1>
-            </ListBooksTitle>
-            <ListBooks books={books} onShelfChange={onShelfChange} />
+            )}
           </>
         )}
       />

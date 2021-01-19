@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const LoadingStyle = styled.div`
-  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 24rem;
 `;
 
 export const LoadingAnimation = styled.span`
@@ -11,7 +13,7 @@ export const LoadingAnimation = styled.span`
   border-left-color: #4b5179;
   border-top-color: #4b5179;
   border-radius: 50%;
-  display: inline-block;
+  display: flex;
   animation: rotate 700ms infinite linear;
 }
 
