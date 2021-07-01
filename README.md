@@ -1,6 +1,6 @@
 ## Update 2021
 
-> - Add Cypress to project => npx open cypress
+> - Add Cypress to project => npx cypress open
 
 ## Update 2020
 
