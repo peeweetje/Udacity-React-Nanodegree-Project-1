@@ -1,3 +1,7 @@
+## Update 2021
+
+> - Add Cypress to project => npx open cypress
+
 ## Update 2020
 
 > - Removed the class-components => add functional components with hooks.
