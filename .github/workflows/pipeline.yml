@@ -33,24 +33,3 @@ jobs:
           heroku_app_name: 'my-reads-library'
           heroku_email: 'petravos70@gmail.com'
           procfile: 'web: npm run start-production'
-
-          name: Cypress Tests
-
-on: [push]
-
-jobs:
-  cypress-run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
-           env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DEFAULT_BUMP: patch
