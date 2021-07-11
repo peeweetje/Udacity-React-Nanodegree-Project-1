@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["cypress", "@testing-library/cypress"],
+    "types": ["jest"],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
