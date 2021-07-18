@@ -1,3 +1,5 @@
+  {
   "hooks": {
-       "pre-commit": "npm run test:e2e:ci"
-     }
+    "pre-commit": "npm run test:e2e:ci",
+  }
+}
